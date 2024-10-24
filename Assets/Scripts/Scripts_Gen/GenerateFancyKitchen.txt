@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GenerateFancyKitchen : Widgets
+{
+    IEnumerator Start()
+    {
+        summary = "This script generates a fancy kitchen.";
+
+        // Load the kitchen model
+        SketchfabLoader loader = gameObject.GetComponent<SketchfabLoader>();
+        List<ModelData> models = new List<ModelData>() { new ModelData("", "fancy_kitchen", "", Vector3.zero, 1f) };
+        yield return loader.LoadBatchWithCachingCoroutine(models);
+    }
+}

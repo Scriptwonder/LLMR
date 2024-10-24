@@ -1,0 +1,34 @@
+using UnityEngine;
+public class RotatingColorChangingCube : Widgets
+{
+    public GameObject cube;
+    public float rotationSpeed = 20f;
+    public float colorChangeInterval = 1f;
+    private float timer;
+    void Start()
+    {
+        summary = "This script creates a cube that rotates and changes color every second.";
+        // Create a cube
+        cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.name = "RotatingColorChangingCube";
+    }
+    void Update()
+    {
+        RotateCube();
+        ChangeColor();
+    }
+    private void RotateCube()
+    {
+        cube.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+    }
+    private void ChangeColor()
+    {
+        timer += Time.deltaTime;
+        if (timer >= colorChangeInterval)
+        {
+            timer = 0f;
+            Color newColor = new Color(Random.value, Random.value, Random.value);
+            cube.GetComponent<Renderer>().material.color = newColor;
+        }
+    }
+}

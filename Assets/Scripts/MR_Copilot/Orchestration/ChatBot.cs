@@ -206,7 +206,7 @@ public async Task SendChatWithInput(string chat_input)
         // loop through all historical chats, add up their token count
         foreach (Message chatPrompt in ChatHistory)
         {
-            num_tokens += tokenizer.GetNumTokens(chatPrompt.Content);
+            num_tokens += tokenizer.GetNumTokens(chatPrompt.Content.ToString());
         }
         return num_tokens;
     }

@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CreateFancyKitchen : Widgets
+{
+    IEnumerator Start()
+    {
+        summary = "This script creates a fancy kitchen scene.";
+
+        // Load the kitchen models
+        SketchfabLoader loader = gameObject.GetComponent<SketchfabLoader>();
+
+        // create a list of models with labels, positions, and scales
+        List<ModelData> models = new List<ModelData>() {
+            new ModelData("", "kitchen_cabinet", "", new Vector3(0,0,0), 1f), // the kitchen cabinet is located at (0,0,0) and has a scale of 1
+            new ModelData("", "kitchen_island", "", new Vector3(2, 0, 0), 1f), // the kitchen island is located at (2,0,0) and has a scale of 1
+            new ModelData("", "refrigerator", "", new Vector3(-2,0,0), 1f), // the refrigerator is located at (-2,0,0) and has a scale of 1
+            new ModelData("", "oven", "", new Vector3(0,0,2), 1f), // the oven is located at (0,0,2) and has a scale of 1
+            new ModelData("", "sink", "kitchen_island", new Vector3(0,1,0), 0.5f), // the sink is located at (0,1,0) relative to the kitchen island and has a scale of 0.5
+            new ModelData("", "dining_table", "", new Vector3(4,0,0), 1f), // the dining table is located at (4,0,0) and has a scale of 1
+            new ModelData("", "chair", "dining_table", new Vector3(0,0,1), 0.5f), // the chair is located at (0,0,1) relative to the dining table and has a scale of 0.5
+            new ModelData("", "chandelier", "", new Vector3(4,3,0), 0.5f) // the chandelier is located at (4,3,0) and has a scale of 0.5
+        };
+      
+        yield return loader.LoadBatchWithCachingCoroutine(models);
+    }   
+}

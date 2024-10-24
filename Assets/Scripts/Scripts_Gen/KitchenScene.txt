@@ -1,0 +1,43 @@
+using UnityEngine;
+public class KitchenScene : Widgets
+{
+    public GameObject cabinet;
+    public GameObject countertop;
+    public GameObject stove;
+    public GameObject refrigerator;
+    public GameObject kitchenIsland;
+
+    void Start()
+    {
+        summary = "This script creates a kitchen scene using primitive shapes.";
+
+        // Create the cabinet
+        cabinet = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cabinet.transform.localScale = new Vector3(2, 2, 0.5f);
+        cabinet.name = "Cabinet";
+
+        // Create the countertop
+        countertop = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        countertop.transform.localScale = new Vector3(2, 0.2f, 1);
+        countertop.name = "Countertop";
+        countertop.transform.position = new Vector3(0, cabinet.transform.localScale.y / 2 + countertop.transform.localScale.y / 2, 0);
+
+        // Create the stove
+        stove = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        stove.transform.localScale = new Vector3(1, 1, 1);
+        stove.name = "Stove";
+        stove.transform.position = new Vector3(0, -cabinet.transform.localScale.y / 2 - stove.transform.localScale.y / 2, 0);
+
+        // Create the refrigerator
+        refrigerator = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        refrigerator.transform.localScale = new Vector3(1, 2, 1);
+        refrigerator.name = "Refrigerator";
+        refrigerator.transform.position = new Vector3(3, 0, 0);
+
+        // Create the kitchen island
+        kitchenIsland = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        kitchenIsland.transform.localScale = new Vector3(2, 1, 1);
+        kitchenIsland.name = "KitchenIsland";
+        kitchenIsland.transform.position = new Vector3(0, 0, 3);
+    }
+}

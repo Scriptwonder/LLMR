@@ -1,0 +1,41 @@
+using UnityEngine;
+
+public class CreateGardenScene : MonoBehaviour
+{
+    public GameObject flower;
+    public GameObject butterfly;
+    public float speed = 1f;
+    public float maxChangeTime = 3f;
+
+    private Vector3 targetPosition;
+    private float changeTime;
+
+    void Start()
+    {
+        // Create the flower and butterfly GameObjects
+        flower = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+        flower.name = "Flower";
+        butterfly = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        butterfly.name = "Butterfly";
+
+        // Initialize the target position and change time
+        targetPosition = butterfly.transform.position;
+        changeTime = maxChangeTime;
+    }
+
+    void Update()
+    {
+        // Move the butterfly towards the target position
+        butterfly.transform.position = Vector3.MoveTowards(butterfly.transform.position, targetPosition, speed * Time.deltaTime);
+
+        // Decrease the change time
+        changeTime -= Time.deltaTime;
+
+        // If the change time is less than zero, choose a new target position
+        if (changeTime < 0)
+        {
+            targetPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(0f, 2f), Random.Range(-10f, 10f));
+            changeTime = maxChangeTime;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+using UnityEngine;
+public class CreateBedroom : Widgets
+{
+    public GameObject bed;
+    public GameObject pillow;
+    public GameObject blanket;
+    public GameObject table;
+    public GameObject lamp;
+    public GameObject lampLight;
+    public GameObject chair;
+    public GameObject wardrobe;
+    public GameObject floor;
+    public GameObject wall1;
+    public GameObject wall2;
+    public GameObject wall3;
+    public GameObject wall4;
+    public GameObject ceiling;
+    void Start()
+    {
+        summary = "This script creates a bedroom scene using primitive shapes like cubes, spheres, and cylinders.";
+        // Create the bed
+        bed = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        bed.transform.localScale = new Vector3(2, 0.5f, 1);
+        bed.name = "Bed";
+        // Create the pillow
+        pillow = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        pillow.transform.localScale = new Vector3(0.5f, 0.2f, 0.5f);
+        pillow.transform.position = new Vector3(bed.transform.position.x, bed.transform.position.y + 0.3f, bed.transform.position.z + 0.3f);
+        pillow.name = "Pillow";
+        // Create the blanket
+        blanket = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        blanket.transform.localScale = new Vector3(1.8f, 0.1f, 0.8f);
+        blanket.transform.position = new Vector3(bed.transform.position.x, bed.transform.position.y + 0.3f, bed.transform.position.z);
+        blanket.name = "Blanket";
+        // Create the table
+        table = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        table.transform.localScale = new Vector3(1, 1, 1);
+        table.transform.position = new Vector3(bed.transform.position.x + 2, bed.transform.position.y, bed.transform.position.z);
+        table.name = "Table";
+        // Create the lamp
+        lamp = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+        lamp.transform.localScale = new Vector3(0.2f, 0.5f, 0.2f);
+        lamp.transform.position = new Vector3(table.transform.position.x, table.transform.position.y + 0.6f, table.transform.position.z);
+        lamp.name = "Lamp";
+        // Create the lamp light
+        lampLight = new GameObject("LampLight");
+        lampLight.AddComponent<Light>();
+        lampLight.transform.position = new Vector3(lamp.transform.position.x, lamp.transform.position.y + 0.3f, lamp.transform.position.z);
+        // Create the chair
+        chair = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        chair.transform.localScale = new Vector3(0.5f, 1, 0.5f);
+        chair.transform.position = new Vector3(bed.transform.position.x - 1, bed.transform.position.y, bed.transform.position.z);
+        chair.name = "Chair";
+        // Create the wardrobe
+        wardrobe = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        wardrobe.transform.localScale = new Vector3(1, 2, 0.5f);
+        wardrobe.transform.position = new Vector3(bed.transform.position.x, bed.transform.position.y + 1, bed.transform.position.z - 2);
+        wardrobe.name = "Wardrobe";
+        // Create the floor
+        floor = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        floor.transform.localScale = new Vector3(10, 0.1f, 10);
+        floor.transform.position = new Vector3(0, -0.5f, 0);
+        floor.name = "Floor";
+        // Create the walls
+        wall1 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        wall1.transform.localScale = new Vector3(10, 3, 0.1f);
+        wall1.transform.position = new Vector3(0, 1, 5);
+        wall1.name = "Wall1";
+        wall2 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        wall2.transform.localScale = new Vector3(10, 3, 0.1f);
+        wall2.transform.position = new Vector3(0, 1, -5);
+        wall2.name = "Wall2";
+        wall3 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        wall3.transform.localScale = new Vector3(0.1f, 3, 10);
+        wall3.transform.position = new Vector3(5, 1, 0);
+        wall3.name = "Wall3";
+        wall4 = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        wall4.transform.localScale = new Vector3(0.1f, 3, 10);
+        wall4.transform.position = new Vector3(-5, 1, 0);
+        wall4.name = "Wall4";
+        // Create the ceiling
+        ceiling = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        ceiling.transform.localScale = new Vector3(10, 0.1f, 10);
+        ceiling.transform.position = new Vector3(0, 3, 0);
+        ceiling.name = "Ceiling";
+    }
+}

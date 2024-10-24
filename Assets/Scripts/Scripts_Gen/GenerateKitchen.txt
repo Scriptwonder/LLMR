@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GenerateKitchen : Widgets
+{
+    IEnumerator Start()
+    {
+        summary = "This script generates a good looking kitchen.";
+
+        // Load the kitchen model
+        SketchfabLoader loader = gameObject.GetComponent<SketchfabLoader>();
+
+        // create a list of models with labels, positions, and scales
+        List<ModelData> models = new List<ModelData>() {
+            new ModelData("", "kitchen", "", new Vector3(0,0,0), 1f) // the kitchen is located at (0,0,0) and has a scale of 1
+        };
+      
+        yield return loader.LoadBatchWithCachingCoroutine(models);
+    }   
+}

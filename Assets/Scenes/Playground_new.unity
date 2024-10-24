@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2761,29 +2760,45 @@ MonoBehaviour:
   dynamicScriptName: GenCode.cs
   defaultSaveScript: 1
   assemblyReferences:
-  - {fileID: 11400000, guid: 8bcbbb9586dfba548aefe089d3fc80ce, type: 2}
-  - {fileID: 11400000, guid: fd98dc7304056f641b578555f31a3d63, type: 2}
-  - {fileID: 11400000, guid: f5e530d0d767a4642b7c36e4bd8262e9, type: 2}
-  - {fileID: 11400000, guid: fe24fc97048e2974787cc8d5328fa171, type: 2}
-  - {fileID: 11400000, guid: 3a471afdf33b8a24b842b92e9d7b3ee3, type: 2}
-  - {fileID: 11400000, guid: e926a68b2b20b4a49b56d48786be169b, type: 2}
-  - {fileID: 11400000, guid: 611354fff151f6e4a86058f949385306, type: 2}
+  - {fileID: 11400000, guid: b835ec533fee0a64db4c8c3be07d863a, type: 2}
+  - {fileID: 11400000, guid: 4cb0138e095a2f44ea556e88d4c6bda4, type: 2}
+  - {fileID: 11400000, guid: 4f63fe05d346c5e419a2c9dd195f0dea, type: 2}
+  - {fileID: 11400000, guid: cf607640f73f5254e8ffe39c27cf2191, type: 2}
+  - {fileID: 11400000, guid: 5a9788ae1c167d14a8b17e012a6d2512, type: 2}
+  - {fileID: 11400000, guid: 33d386a9ab3791643ad4e021cec67dc4, type: 2}
+  - {fileID: 11400000, guid: daa80df0c7fce94488f5cb2794668b69, type: 2}
   - {fileID: 11400000, guid: 49e9f5d6abb77204793f81ae256f8b86, type: 2}
+  - {fileID: 11400000, guid: 5aee9bce97ce92f48b2d6cf18dbe96f9, type: 2}
+  - {fileID: 11400000, guid: fe24fc97048e2974787cc8d5328fa171, type: 2}
+  - {fileID: 11400000, guid: c156776f898446d40a055fc9ac8ea95c, type: 2}
+  - {fileID: 11400000, guid: 3b6030b1745f745408787adfeeeecd27, type: 2}
+  - {fileID: 11400000, guid: a7d8c60ac1671ad4cbc0e738128fa81d, type: 2}
+  - {fileID: 11400000, guid: 77382d216744bb848bce5fb5720229ff, type: 2}
+  - {fileID: 11400000, guid: eee75363a127d4e43acec7a183e8ba84, type: 2}
+  - {fileID: 11400000, guid: 510c50f5e5e09744fb828f3e314cdb55, type: 2}
+  - {fileID: 11400000, guid: 3a471afdf33b8a24b842b92e9d7b3ee3, type: 2}
+  - {fileID: 11400000, guid: 0e5385930e24df945ae1aecf55b68084, type: 2}
   - {fileID: 11400000, guid: a1c9628d65ee91440a328850888fb21e, type: 2}
-  - {fileID: 11400000, guid: dd414619916f58f46a13c71d7ad35092, type: 2}
-  - {fileID: 11400000, guid: 493c18d05a434c14995c9fce93cb9f1f, type: 2}
-  - {fileID: 11400000, guid: 05b78fed873411e4c82378879c28049c, type: 2}
-  - {fileID: 11400000, guid: 863033c1dc773e7459d0bc9727e812f6, type: 2}
-  - {fileID: 11400000, guid: 052c69a498437e949bce7bea45987c6b, type: 2}
-  - {fileID: 11400000, guid: 93cd16b8945e2b74cb3101170cee91dd, type: 2}
+  - {fileID: 11400000, guid: 49e9f5d6abb77204793f81ae256f8b86, type: 2}
+  - {fileID: 11400000, guid: a8498db15a507764cb646d6e524a2229, type: 2}
   - {fileID: 11400000, guid: cece2a7086b72e945a5c99dff71597dc, type: 2}
   - {fileID: 11400000, guid: f4dfa258860e481479bf5ab6ae500faf, type: 2}
-  - {fileID: 11400000, guid: 96d1570316fbaa442832db73be8ec23e, type: 2}
-  - {fileID: 11400000, guid: 9f2ef89ed5164d442b93e6081ee22df0, type: 2}
-  - {fileID: 11400000, guid: 36462e002629c5f44879bbc28191a4f1, type: 2}
-  - {fileID: 11400000, guid: a58aa173034ad6347afbb6e1fe6fa495, type: 2}
-  - {fileID: 11400000, guid: eff793678506a0744a1d7123bb594d3b, type: 2}
-  - {fileID: 11400000, guid: cca85ba8b3b509a4f82a43b163969b85, type: 2}
+  - {fileID: 11400000, guid: 93cd16b8945e2b74cb3101170cee91dd, type: 2}
+  - {fileID: 11400000, guid: 052c69a498437e949bce7bea45987c6b, type: 2}
+  - {fileID: 11400000, guid: 047def5916b8efd4788cdf202f1c502e, type: 2}
+  - {fileID: 11400000, guid: d63caa786bb07a04dbed0198792760d9, type: 2}
+  - {fileID: 11400000, guid: e877e94ac5f9c7c4192a879696d5e5d8, type: 2}
+  - {fileID: 11400000, guid: e926a68b2b20b4a49b56d48786be169b, type: 2}
+  - {fileID: 11400000, guid: 9aaee4c8ee6c8884aa9539113bf206eb, type: 2}
+  - {fileID: 11400000, guid: c6b57557a772f9341a5d2fbb6bdac8ef, type: 2}
+  - {fileID: 11400000, guid: 76da9ec5e0bdb5b4f8859a309fcad7ac, type: 2}
+  - {fileID: 11400000, guid: 8a166b14e308c7b469bd85d7cd26b915, type: 2}
+  - {fileID: 11400000, guid: 2758285f35b4fd944a11efb50456f382, type: 2}
+  - {fileID: 11400000, guid: d7aea23623df9fc4b83314e13de1b8c9, type: 2}
+  - {fileID: 11400000, guid: 7d390547e940fc8428f9814efb86d6ec, type: 2}
+  - {fileID: 11400000, guid: e1317911478447e4b8cdeeb62efde95d, type: 2}
+  - {fileID: 11400000, guid: 674c07d465cccfe4bbc2ba76105e4289, type: 2}
+  - {fileID: 11400000, guid: ec77353d189d2d94b9cc596020b647b0, type: 2}
 --- !u!114 &900377950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2796,8 +2811,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ff81fd208ff6040ab456ab493780c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  use_DALLE_CLIP_refinement: 0
-  save_models_to_nontemp_folder: 0
+  use_DALLE_CLIP_refinement: 1
+  save_models_to_nontemp_folder: 1
   finder: {fileID: 900377954}
   username: 
   password: 
@@ -4889,8 +4904,8 @@ MonoBehaviour:
   use_DALLE_CLIP_refinement: 1
   save_models_to_nontemp_folder: 1
   finder: {fileID: 1387878456}
-  username: abanburski@microsoft.com
-  password: kalamazoo1!
+  username: martinwfire@gmail.com
+  password: Wstgh233....
   baseUrl: https://api.sketchfab.com/v3/models?
   maximumPageLimit: 1
   searchResults: []

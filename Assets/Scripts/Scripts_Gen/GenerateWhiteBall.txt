@@ -1,0 +1,14 @@
+using UnityEngine;
+public class GenerateWhiteBall : Widgets
+{
+    public GameObject ball;
+    void Start()
+    {
+        summary = "This script generates a white ball";
+        // Create a sphere (ball)
+        ball = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        ball.name = "WhiteBall";
+        // Change the color of the ball to white
+        ball.GetComponent<Renderer>().material.color = Color.white;
+    }
+}
